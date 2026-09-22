@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Surprise 🎂💕</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- MUSIC TOGGLE BUTTON -->
+    <div class="music-toggle">
+        <button id="musicButton" class="music-btn" title="Click to play music">🎵</button>
+        <audio id="birthdayMusic" loop preload="metadata">
+            <source src="https://assets.mixkit.co/active_storage/sfx/2327/2327-preview.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <!-- FLOATING BACKGROUND DECORATIONS -->
+    <div class="background-decorations">
+        <div class="floating-heart">💕</div>
+        <div class="floating-heart">💕</div>
+        <div class="floating-heart">💕</div>
+        <div class="floating-heart">💕</div>
+        <div class="floating-heart">💕</div>
+        <div class="floating-particle">✨</div>
+        <div class="floating-particle">✨</div>
+        <div class="floating-particle">✨</div>
+    </div>
+
+    <!-- PROGRESS INDICATOR -->
+    <div class="progress-indicator">
+        <span class="progress-text">01 / 06</span>
+    </div>
+
+    <!-- SCREEN 1: SURPRISE LETTER -->
+    <section class="screen screen-1 active">
+        <div class="container">
+            <div class="card envelope-card">
+                <div class="envelope-illustration">💌</div>
+                <h1 class="heading">You've got a surprise...</h1>
+                <p class="subtitle">Someone made this only for you.</p>
+                <p class="subtitle-small">Tap the letter to open it 💕</p>
+                <button class="button pink-button" id="openEnvelopeBtn">Tap to Open 💌</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCREEN 2: MAKE A WISH -->
+    <section class="screen screen-2">
+        <div class="container">
+            <div class="screen-header">
+                <h1 class="heading">First... make a wish 🎂</h1>
+                <p class="subtitle">Tap the flames to blow them out</p>
+            </div>
+            
+            <div class="cake-container">
+                <div class="birthday-cake">
+                    <div class="cake-layers">
+                        <div class="cake-layer layer-1"></div>
+                        <div class="cake-layer layer-2"></div>
+                        <div class="cake-layer layer-3"></div>
+                    </div>
+                    <div class="candles">
+                        <div class="candle" id="candle-1">
+                            <div class="candle-stick"></div>
+                            <div class="flame"></div>
+                        </div>
+                        <div class="candle" id="candle-2">
+                            <div class="candle-stick"></div>
+                            <div class="flame"></div>
+                        </div>
+                        <div class="candle" id="candle-3">
+                            <div class="candle-stick"></div>
+                            <div class="flame"></div>
+                        </div>
+                        <div class="candle" id="candle-4">
+                            <div class="candle-stick"></div>
+                            <div class="flame"></div>
+                        </div>
+                        <div class="candle" id="candle-5">
+                            <div class="candle-stick"></div>
+                            <div class="flame"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wish-message" id="wishMessage" style="display: none;">
+                <p class="wish-text">Wish made! 💕</p>
+                <button class="button pink-button" id="continueFromWishBtn">Continue →</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCREEN 3: CUT THE CAKE -->
+    <section class="screen screen-3">
+        <div class="container">
+            <div class="screen-header">
+                <h1 class="heading">Now cut the cake 🔪</h1>
+                <p class="subtitle">Drag the knife across the cake</p>
+            </div>
+
+            <div class="cake-cutting-container" id="cakeCuttingContainer">
+                <div class="cake-to-cut" id="cakeToCut">
+                    <div class="cake-layers">
+                        <div class="cake-layer layer-1"></div>
+                        <div class="cake-layer layer-2"></div>
+                        <div class="cake-layer layer-3"></div>
+                    </div>
+                </div>
+                <div class="knife" id="knife">🔪</div>
+            </div>
+
+            <div class="cut-message" id="cutMessage" style="display: none;">
+                <p class="cut-text">Cake cut! 🎂💕</p>
+                <button class="button pink-button" id="continueFromCutBtn">Continue →</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCREEN 4: OUR MEMORIES -->
+    <section class="screen screen-4">
+        <div class="container">
+            <div class="screen-header">
+                <h1 class="heading">Us, in tiny moments 💕</h1>
+            </div>
+
+            <div class="photo-gallery">
+                <div class="gallery-item">
+                    <img src="12.jpg" alt="Memory 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="beautiful cat celebrate.jpg" alt="Memory 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="adults.jpg" alt="Memory 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="teens.jpg" alt="Memory 4">
+                </div>
+                <div class="gallery-item">
+                    <img src="79c51129cb33c908884fa156d27f5703.jpg" alt="Memory 5">
+                </div>
+                <div class="gallery-item">
+                    <img src="birthday.jpg" alt="Memory 6">
+                </div>
+            </div>
+
+            <p class="memories-text">Every one of these is how I feel around you.</p>
+
+            <button class="button pink-button" id="nextMemoryBtn">Next Memory →</button>
+        </div>
+    </section>
+
+    <!-- SCREEN 5: A LITTLE LETTER -->
+    <section class="screen screen-5">
+        <div class="container">
+            <div class="card letter-card">
+                <h1 class="heading letter-heading">A little letter for you...</h1>
+                
+                <div class="letter-content">
+                    <p>From the moment you came into my life,<br>everything started to feel warmer.</p>
+                    
+                    <p>Your smile makes ordinary days special.<br>Your happiness means more to me than words can say.</p>
+                    
+                    <p>Thank you for being you.<br>I hope this birthday brings you all the happiness<br>you deserve.</p>
+                    
+                    <p class="letter-signature">— always yours 💌</p>
+                </div>
+
+                <button class="button pink-button" id="finalSurpriseBtn">One last thing 🎁</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCREEN 6: FINAL SURPRISE -->
+    <section class="screen screen-6">
+        <div class="container">
+            <div class="screen-header">
+                <h1 class="heading final-heading">Happy Birthday, Eman 🎂❤️</h1>
+                <p class="final-message">I am truly special for me.</p>
+            </div>
+
+            <div class="gift-container">
+                <div class="gift-box" id="giftBox">🎁</div>
+                <p class="gift-instruction">Click the gift to open it! ✨</p>
+            </div>
+
+            <div class="final-celebration" id="finalCelebration" style="display: none;">
+                <p class="celebration-text">Happy Birthday dear! ❤️</p>
+                <div class="photo-gallery-small">
+                    <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=150&h=150&fit=crop" alt="Memory">
+                    <img src="https://images.unsplash.com/photo-1511379938547-c1f69b13d835?w=150&h=150&fit=crop" alt="Memory">
+                    <img src="https://images.unsplash.com/photo-1544078751-58fee2d8a03b?w=150&h=150&fit=crop" alt="Memory">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
