@@ -836,3 +836,28 @@ body {
         transition-duration: 0.01ms !important;
     }
 }
+.final-section{
+    text-align:center;
+    display:flex;
+    flex-dirction:columm;
+    align-items: center;
+    justify-content: center;
+}
+.final-section h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.final=section.images{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+    width:100%;
+    flex-wrap:wrap;
+}
+.final-section.images img{
+    width:180px;
+    height:190px;
+    object-fit:cover;
+    border-radius:15px;
+}
